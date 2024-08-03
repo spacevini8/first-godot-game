@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bx5vkuqqahwy7"]
+[gd_scene load_steps=10 format=3 uid="uid://bx5vkuqqahwy7"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_1kgly"]
 [ext_resource type="Texture2D" uid="uid://d0qboqxq53wps" path="res://dodge_the_creeps_2d_assets/dodge_the_creeps_2d_assets/art/enemyFlyingAlt_1.png" id="1_fkich"]
@@ -44,6 +44,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdq40"]
+radius = 37.3363
+
 [node name="Mob" type="RigidBody2D"]
 collision_mask = 0
 gravity_scale = 0.0
@@ -55,5 +58,6 @@ sprite_frames = SubResource("SpriteFrames_g0g4v")
 animation = &"fly"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wdq40")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
